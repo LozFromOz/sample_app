@@ -20,7 +20,7 @@ describe "User pages" do
   end
 
 
-describe "signup" do
+ describe "signup" do
 
     before { visit signup_path }
 
@@ -32,7 +32,7 @@ describe "signup" do
       end
     end
 
-    describe "with valid information" do
+   describe "with valid information" do
       before do
         fill_in "Name",         with: "Example User"
         fill_in "Email",        with: "user@example.com"
@@ -53,6 +53,24 @@ describe "signup" do
         it { should have_title(user.name) }
         it { should have_selector('div.alert.alert-success', text: 'Welcome') }
       end
+    end #ends with valid information
+  end #ends signup
+
+
+  describe "edit" do
+    let(:user) { FactoryGirl.create(:user) }
+    before { visit edit_user_path(user) }
+
+    describe "page" do
+      it { should have_content("Update your profile") }
+      it { should have_title("Edit user") }
+      it { should have_link('change', href: 'http://gravatar.com/emails') }
     end
-  end
-end
+
+    describe "with invalid information" do
+      before { click_button "Save changes" }
+
+      it { should have_content('error') }
+    end
+  end #ends edit
+end #ends user pages
