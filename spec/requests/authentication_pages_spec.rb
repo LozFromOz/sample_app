@@ -4,6 +4,9 @@ describe "Authentication" do
 
   subject { page }
 
+  # verify that non-signed-in users attempting to access either action 
+# are simply sent to the signin page
+
   describe "signin page" do
     before { visit signin_path }
 
@@ -45,7 +48,7 @@ describe "Authentication" do
       end
    end #end of describe with valid information
 
-   describe "authorization" do
+    describe "authorization" do
 
     describe "for non-signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
@@ -64,19 +67,9 @@ describe "Authentication" do
             expect(page).to have_title('Edit user')
           end
         end
-      end#of for non-signed-in-users
+      end#of when attempting to visit a protected page
 
-      describe "as non-admin user" do
-      let(:user) { FactoryGirl.create(:user) }
-      let(:non_admin) { FactoryGirl.create(:user) }
-
-      before { sign_in non_admin, no_capybara: true }
-
-      describe "submitting a DELETE request to the Users#destroy action" do
-        before { delete user_path(user) }
-        specify { expect(response).to redirect_to(root_url) }
-      end
-    end#end of as non-admin user
+      
 
       describe "in the Users controller" do
 
@@ -96,7 +89,22 @@ describe "Authentication" do
         end
       end #end of in the Users controller
 
-       describe "as wrong user" do
+    describe "in the Microposts controller" do
+
+        describe "submitting to the create action" do
+          before { post microposts_path }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+
+        describe "submitting to the destroy action" do
+          before { delete micropost_path(FactoryGirl.create(:micropost)) }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+      end#end of in microposts controller
+
+      end# for nonsigned in users
+
+    describe "as wrong user" do
       let(:user) { FactoryGirl.create(:user) }
       let(:wrong_user) { FactoryGirl.create(:user, email: "wrong@example.com") }
       before { sign_in user, no_capybara: true }
@@ -111,8 +119,19 @@ describe "Authentication" do
         before { patch user_path(wrong_user) }
         specify { expect(response).to redirect_to(root_url) }
       end
+    end # describe as wrong user
+
+    describe "as non-admin user" do
+      let(:user) { FactoryGirl.create(:user) }
+      let(:non_admin) { FactoryGirl.create(:user) }
+
+      before { sign_in non_admin, no_capybara: true }
+
+      describe "submitting a DELETE request to the Users#destroy action" do
+        before { delete user_path(user) }
+        specify { expect(response).to redirect_to(root_url) }
+      end
+    end#end of as non-admin user
     end# end of authorization
-  end # describe as wrong user
-   end # end describe signin do
   end #end of Authentication
 end #end ofspec-helper
