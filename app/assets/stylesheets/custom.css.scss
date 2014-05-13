@@ -81,24 +81,6 @@ p {
   }
 }
 
-nav-menu {
-  color: white;
-  a {
-    color: $white;
-    &:hover {
-      color: $blue;
-    }
-  }
-  ul {
-    float: left;
-    margin: 0px auto 0px auto;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
-}
 
 /* footer */
 
