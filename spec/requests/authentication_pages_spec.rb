@@ -65,9 +65,21 @@ describe "Authentication" do
 
           it "should render the desired protected page" do
             expect(page).to have_title('Edit user')
-          end
+          end#of after signing in
+        end#of when attempting yo visit a protected page
+
+        describe "in the Relationships controller" do
+        describe "submitting to the create action" do
+          before { post relationships_path }
+          specify { expect(response).to redirect_to(signin_path) }
         end
-      end#of when attempting to visit a protected page
+
+        describe "submitting to the destroy action" do
+          before { delete relationship_path(1) }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+      end
+      end#of for nonsigned in users
 
       
 
