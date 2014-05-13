@@ -81,6 +81,25 @@ p {
   }
 }
 
+nav-menu {
+  color: white;
+  a {
+    color: $white;
+    &:hover {
+      color: $blue;
+    }
+  }
+  ul {
+    float: left;
+    margin: 0px auto 0px auto;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
 /* footer */
 
 footer {
@@ -107,29 +126,7 @@ footer {
   }
 }
 
-nav-menu {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover {
-      color: $grayDarker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
-}
+
 
 /* miscellaneous */
 
