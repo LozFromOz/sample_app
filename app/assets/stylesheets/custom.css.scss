@@ -46,7 +46,6 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-  color: red;
 }
 
 h2 {
@@ -85,6 +84,30 @@ p {
 /* footer */
 
 footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+nav-menu {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
