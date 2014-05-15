@@ -19,7 +19,31 @@ class StaticPagesController < ApplicationController
   def branding
   end
 
+  def advertising
+  end
+
+  def traditional_advertising
+  end
+
+  def digital_advertising
+  end
+
+  def media_release
+  end
+
+  def event_management
+  end
+
+  def blogging
+  end
+
+  def digital_advertising
+  end
+
   def seo
+  end
+
+  def market_research
   end
 
 end

@@ -36,8 +36,8 @@
                 Advertising <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Traditional Advertising", root_path   %></li>
-                <li><%= link_to "Digital Advertising", root_path   %></li>
+                <li><%= link_to "Traditional Advertising", traditional_advertising_path   %></li>
+                <li><%= link_to "Digital Advertising", digital_advertising_path   %></li>
               </ul>
             </li>
           <li><%= link_to "Branding", branding_path  %></li>  
@@ -46,9 +46,9 @@
                 Public Relations <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Media Release", root_path   %></li>
-                <li><%= link_to "Event Management", root_path   %></li>
-                 <li><%= link_to "Blogging", root_path   %></li>
+                <li><%= link_to "Media Release", media_release_path   %></li>
+                <li><%= link_to "Event Management", event_management_path   %></li>
+                 <li><%= link_to "Blogging", blogging_path   %></li>
 
               </ul>
             </li>
@@ -65,7 +65,7 @@
                 <li><%= link_to "Online Advertising", root_path   %></li>
               </ul>
             </li>
-          <li><%= link_to "Market Research", root_path  %></li> 
+          <li><%= link_to "Market Research", market_research_path  %></li> 
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Strategy <b class="caret"></b>
@@ -89,8 +89,6 @@
       <form class="navbar-form navbar-left" role="search" style="width: 95%; margin-left: 10px;">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search...">
-          <span class="glyphicon glyphicon-search"></span>
- <!-- Lauren when you get time find a way to link back to the artist here http://glyphicons.com/ -->
         </div>
        <!-- <button type="submit" class="btn btn-default">Submit</button> -->
       </form>

@@ -16,8 +16,15 @@ SampleApp::Application.routes.draw do
   match '/news',    to: 'static_pages#news',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/traditional_advertising',      to: 'static_pages#traditional_advertising',      via: 'get'
+  match '/digital_advertising',      to: 'static_pages#digital_advertising',      via: 'get'
   match '/branding', to: 'static_pages#branding', via: 'get'
+  match '/media_release', to: 'static_pages#media_release', via: 'get'
+  match '/event_management', to: 'static_pages#event_management', via: 'get'
+  match '/blogging', to: 'static_pages#blogging', via: 'get'
   match '/seo',      to: 'static_pages#seo',      via: 'get'
+  match '/market_research',      to: 'static_pages#market_research',      via: 'get'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

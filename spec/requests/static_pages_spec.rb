@@ -70,6 +70,23 @@ describe "Static pages" do
     it { should have_title(full_title('Contact')) }
   end
 
+
+ describe "Traditional Advertising page" do
+    before { visit traditional_advertising_path }
+
+    it { should have_selector('h1', text: 'Traditional Advertising') }
+    it { should have_title(full_title('Traditional Advertising')) }
+  end
+
+
+ describe "Digital Advertising page" do
+    before { visit digital_advertising_path }
+
+    it { should have_selector('h1', text: 'Digital Advertising') }
+    it { should have_title(full_title('Digital Advertising')) }
+  end
+
+
  describe "Branding page" do
     before { visit branding_path }
 
@@ -84,18 +101,49 @@ describe "Static pages" do
     it { should have_title(full_title('SEO')) }
   end
 
+ describe "Market Research page" do
+    before { visit market_research_path }
+
+    it { should have_selector('h1', text: 'Market Research') }
+    it { should have_title(full_title('Market Research')) }
+  end
+
+
   it "should have the right links on the layout" do
     visit root_path
     click_link "About"
     expect(page).to have_title(full_title('About Us'))
+    
     click_link "Help"
     expect(page).to have_title(full_title('Help'))
+    
     click_link "Contact"
     expect(page).to have_title(full_title('Contact'))
+    
+    click_link "Traditional Advertising"
+    expect(page).to have_title(full_title('Traditional Advertising'))
+    
+    click_link "Digital Advertising"  
+    expect(page).to have_title(full_title('Digital Advertising'))
+    
     click_link "Branding"
     expect(page).to have_title(full_title('Branding'))
+    
+    click_link "Media Release"
+    expect(page).to have_title(full_title('Media Release'))
+    
+    click_link "Event Management"
+    expect(page).to have_title(full_title('Event Management'))
+    
+    click_link "Blogging"
+    expect(page).to have_title(full_title('Blogging'))
+    
     click_link "SEO"
     expect(page).to have_title(full_title('SEO'))
+
+    click_link "Market Research"
+    expect(page).to have_title(full_title('Market Research'))
+    
     click_link "Home"
     click_link "Sign up now!"
     expect(page).to have_title(full_title('Sign up'))
