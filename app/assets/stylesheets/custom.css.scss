@@ -86,8 +86,12 @@ p {
   }
 }
 
-#nav-menu a {
+#nav-menu ul li a {
   color: LightSeaGreen;
+}
+
+#nav-menu ul li u li a {
+  color: grayMediumLight;
 }
 
 /* footer */
