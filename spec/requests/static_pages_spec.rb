@@ -157,6 +157,13 @@ describe "Static pages" do
     it { should have_title(full_title('Marketing Program/Plan')) }
   end
 
+  describe "Google Analytics page" do
+    before { visit google_analytics_path }
+
+    it { should have_selector('h1', text: 'Google Analytics') }
+    it { should have_title(full_title('Google Analytics')) }
+  end
+
 
 
 
@@ -210,6 +217,10 @@ describe "Static pages" do
     expect(page).to have_title(full_title('Marketing Strategies'))
     click_link "Marketing Program/Plan"
     expect(page).to have_title(full_title('Marketing Program/Plan'))
+
+    click_link "Google Analytics"
+    expect(page).to have_title(full_title('Google Analytics'))
+
 
     click_link "Home"
     click_link "Sign up now!"
