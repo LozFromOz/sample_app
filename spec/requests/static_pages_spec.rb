@@ -77,6 +77,12 @@ describe "Static pages" do
     it { should have_title(full_title('Branding')) }
   end
 
+ describe "SEO page" do
+    before { visit seo_path }
+
+    it { should have_selector('h1', text: 'SEO') }
+    it { should have_title(full_title('SEO')) }
+  end
 
   it "should have the right links on the layout" do
     visit root_path
@@ -88,6 +94,8 @@ describe "Static pages" do
     expect(page).to have_title(full_title('Contact'))
     click_link "Branding"
     expect(page).to have_title(full_title('Branding'))
+    click_link "SEO"
+    expect(page).to have_title(full_title('SEO'))
     click_link "Home"
     click_link "Sign up now!"
     expect(page).to have_title(full_title('Sign up'))

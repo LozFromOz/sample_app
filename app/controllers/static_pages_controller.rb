@@ -19,4 +19,7 @@ class StaticPagesController < ApplicationController
   def branding
   end
 
+  def seo
+  end
+
 end
