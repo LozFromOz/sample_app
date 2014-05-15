@@ -55,4 +55,11 @@ class StaticPagesController < ApplicationController
   def market_research
   end
 
+  def strategic_analysis
+  end
+
+  def marketing_objectives
+  end
+
+
 end

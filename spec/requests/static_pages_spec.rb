@@ -129,6 +129,22 @@ describe "Static pages" do
     it { should have_title(full_title('Market Research')) }
   end
 
+   describe "Strategic Analysis page" do
+    before { visit strategic_analysis_path }
+
+    it { should have_selector('h1', text: 'Strategic Analysis') }
+    it { should have_title(full_title('Strategic Analysis')) }
+  end
+
+   describe "Marketing Objectives page" do
+    before { visit marketing_objectives_path }
+
+    it { should have_selector('h1', text: 'Marketing Objectives') }
+    it { should have_title(full_title('Marketing Objectives')) }
+  end
+
+
+
 
   it "should have the right links on the layout" do
     visit root_path
@@ -171,7 +187,14 @@ describe "Static pages" do
 
     click_link "Market Research"
     expect(page).to have_title(full_title('Market Research'))
-    
+
+    click_link "Strategic Analysis"
+    expect(page).to have_title(full_title('Strategic Analysis'))
+    click_link "Marketing Objectives"
+    expect(page).to have_title(full_title('Marketing Objectives'))
+
+
+
     click_link "Home"
     click_link "Sign up now!"
     expect(page).to have_title(full_title('Sign up'))

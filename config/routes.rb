@@ -24,9 +24,14 @@ SampleApp::Application.routes.draw do
   match '/blogging', to: 'static_pages#blogging', via: 'get'
   match '/seo',      to: 'static_pages#seo',      via: 'get'
   match '/email_marketing',      to: 'static_pages#email_marketing',      via: 'get'
-  match '/social_media_marketing',      to: 'static_pages#social_media_marketing',      via: 'get'
-  match '/online_advertising',      to: 'static_pages#online_advertising',      via: 'get'
+  match '/social_media_marketing', to: 'static_pages#social_media_marketing',      via: 'get'
+  match '/online_advertising',   to: 'static_pages#online_advertising',   via: 'get'
   match '/market_research',      to: 'static_pages#market_research',      via: 'get'
+  match '/strategic_analysis',      to: 'static_pages#strategic_analysis',      via: 'get'
+  match '/marketing_objectives',      to: 'static_pages#marketing_objectives',      via: 'get'
+  
+
+
 
 
 
