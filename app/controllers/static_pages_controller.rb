@@ -61,5 +61,12 @@ class StaticPagesController < ApplicationController
   def marketing_objectives
   end
 
+  def marketing_strategies
+  end
+
+  def marketing_program_plan
+  end
+
+  
 
 end

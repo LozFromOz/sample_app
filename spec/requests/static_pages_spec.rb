@@ -143,6 +143,20 @@ describe "Static pages" do
     it { should have_title(full_title('Marketing Objectives')) }
   end
 
+   describe "Marketing Strategies page" do
+    before { visit marketing_strategies_path }
+
+    it { should have_selector('h1', text: 'Marketing Strategies') }
+    it { should have_title(full_title('Marketing Strategies')) }
+  end
+
+  describe "Marketing Program/Plan page" do
+    before { visit marketing_program_plan_path }
+
+    it { should have_selector('h1', text: 'Marketing Program/Plan') }
+    it { should have_title(full_title('Marketing Program/Plan')) }
+  end
+
 
 
 
@@ -192,8 +206,10 @@ describe "Static pages" do
     expect(page).to have_title(full_title('Strategic Analysis'))
     click_link "Marketing Objectives"
     expect(page).to have_title(full_title('Marketing Objectives'))
-
-
+    click_link "Marketing Strategies"
+    expect(page).to have_title(full_title('Marketing Strategies'))
+    click_link "Marketing Program/Plan"
+    expect(page).to have_title(full_title('Marketing Program/Plan'))
 
     click_link "Home"
     click_link "Sign up now!"

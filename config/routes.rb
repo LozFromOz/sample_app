@@ -29,7 +29,8 @@ SampleApp::Application.routes.draw do
   match '/market_research',      to: 'static_pages#market_research',      via: 'get'
   match '/strategic_analysis',      to: 'static_pages#strategic_analysis',      via: 'get'
   match '/marketing_objectives',      to: 'static_pages#marketing_objectives',      via: 'get'
-  
+  match '/marketing_strategies',      to: 'static_pages#marketing_strategies',      via: 'get' 
+  match '/marketing_program_plan',      to: 'static_pages#marketing_program_plan',      via: 'get' 
 
 
 
