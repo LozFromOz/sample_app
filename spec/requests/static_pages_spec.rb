@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-  let(:base_title) { "Ruby on Rails Tutorial Sample App" }
+  let(:base_title) { "Marketing Guide" }
 
   subject { page }
 
@@ -70,6 +70,14 @@ describe "Static pages" do
     it { should have_title(full_title('Contact')) }
   end
 
+ describe "Branding page" do
+    before { visit branding_path }
+
+    it { should have_selector('h1', text: 'Branding') }
+    it { should have_title(full_title('Branding')) }
+  end
+
+
   it "should have the right links on the layout" do
     visit root_path
     click_link "About"
@@ -78,6 +86,8 @@ describe "Static pages" do
     expect(page).to have_title(full_title('Help'))
     click_link "Contact"
     expect(page).to have_title(full_title('Contact'))
+    click_link "Branding"
+    expect(page).to have_title(full_title('Branding'))
     click_link "Home"
     click_link "Sign up now!"
     expect(page).to have_title(full_title('Sign up'))

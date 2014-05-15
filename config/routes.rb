@@ -16,9 +16,10 @@ SampleApp::Application.routes.draw do
   match '/news',    to: 'static_pages#news',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/search-engine-optimisation',     to: 'static_pages#search-engine-optimisation',     via: 'get'
+  match '/branding', to: 'static_pages#branding', via: 'get'
 
-    # The priority is based upon order of creation: first created -> highest priority.
+
+  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
