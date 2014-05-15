@@ -43,6 +43,15 @@ class StaticPagesController < ApplicationController
   def seo
   end
 
+  def email_marketing
+  end
+
+  def social_media_marketing
+  end
+
+  def online_advertising
+  end
+
   def market_research
   end
 
