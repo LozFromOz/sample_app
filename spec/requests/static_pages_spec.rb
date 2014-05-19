@@ -101,12 +101,21 @@ describe "Static pages" do
     it { should have_title(full_title('SEO')) }
   end
 
- describe "SEO page" do
-    before { visit seo_path }
 
-    it { should have_selector('h1', text: 'SEO') }
-    it { should have_title(full_title('SEO')) }
+ describe "Email Marketing page" do
+    before { visit email_marketing_path }
+
+    it { should have_selector('h1', text: 'Email Marketing') }
+    it { should have_title(full_title('Email Marketing')) }
   end
+
+   describe "Mobile Marketing page" do
+    before { visit mobile_marketing_path }
+
+    it { should have_selector('h1', text: 'Mobile Marketing') }
+    it { should have_title(full_title('Mobile Marketing')) }
+  end
+
 
  describe "Social Media Marketing page" do
     before { visit social_media_marketing_path }
@@ -201,6 +210,8 @@ describe "Static pages" do
 
     click_link "Email Marketing"
     expect(page).to have_title(full_title('Email Marketing'))
+    click_link "Mobile Marketing"
+    expect(page).to have_title(full_title('Mobile Marketing'))
     click_link "Social Media Marketing"
     expect(page).to have_title(full_title('Social Media Marketing'))
     click_link "Online Advertising"

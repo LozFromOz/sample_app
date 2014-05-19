@@ -24,6 +24,7 @@ SampleApp::Application.routes.draw do
   match '/blogging', to: 'static_pages#blogging', via: 'get'
   match '/seo',      to: 'static_pages#seo',      via: 'get'
   match '/email_marketing',      to: 'static_pages#email_marketing',      via: 'get'
+  match '/mobile_marketing',      to: 'static_pages#mobile_marketing',      via: 'get'
   match '/social_media_marketing', to: 'static_pages#social_media_marketing',      via: 'get'
   match '/online_advertising',   to: 'static_pages#online_advertising',   via: 'get'
   match '/market_research',      to: 'static_pages#market_research',      via: 'get'
@@ -32,6 +33,7 @@ SampleApp::Application.routes.draw do
   match '/marketing_strategies',      to: 'static_pages#marketing_strategies',      via: 'get' 
   match '/marketing_program_plan',      to: 'static_pages#marketing_program_plan',      via: 'get' 
   match '/google_analytics',      to: 'static_pages#google_analytics',      via: 'get' 
+  match '/metrics',      to: 'static_pages#metrics',      via: 'get' 
 
 
 
