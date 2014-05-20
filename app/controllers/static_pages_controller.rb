@@ -67,7 +67,7 @@ class StaticPagesController < ApplicationController
   def marketing_program_plan
   end
 
-  def metrics
+  def key_metrics
   end
 
   def google_analytics
