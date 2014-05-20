@@ -173,6 +173,12 @@ describe "Static pages" do
     it { should have_title(full_title('Google Analytics')) }
   end
 
+  describe "Key Metrics page" do
+    before { visit key_metrics_path }
+
+    it { should have_selector('h1', text: 'Key Metrics') }
+    it { should have_title(full_title('Key Metrics')) }
+  end
 
 
 
@@ -231,7 +237,8 @@ describe "Static pages" do
 
     click_link "Google Analytics"
     expect(page).to have_title(full_title('Google Analytics'))
-
+    click_link "Key Metrics"
+    expect(page).to have_title(full_title('Key Metrics'))
 
     click_link "Home"
     click_link "Sign up now!"
