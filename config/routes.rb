@@ -34,7 +34,7 @@ SampleApp::Application.routes.draw do
   match '/marketing_program_plan',      to: 'static_pages#marketing_program_plan',      via: 'get' 
   match '/google_analytics',      to: 'static_pages#google_analytics',      via: 'get' 
   match '/key_metrics',      to: 'static_pages#key_metrics',      via: 'get' 
-
+  match '/marketing_acronyms',      to: 'static_pages#marketing_acronyms',      via: 'get' 
 
 
 

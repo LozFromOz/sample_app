@@ -73,5 +73,7 @@ class StaticPagesController < ApplicationController
   def google_analytics
   end
   
+  def marketing_acronyms
+  end
 
 end

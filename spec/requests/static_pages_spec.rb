@@ -180,6 +180,12 @@ describe "Static pages" do
     it { should have_title(full_title('Key Metrics')) }
   end
 
+  describe "Marketing Acronyms page" do
+    before { visit marketing_acronyms_path }
+
+    it { should have_selector('h1', text: 'Marketing Acronyms') }
+    it { should have_title(full_title('Marketing Acronyms')) }
+  end
 
   it "should have the right links on the layout" do
     visit root_path
@@ -238,6 +244,8 @@ describe "Static pages" do
     expect(page).to have_title(full_title('Google Analytics'))
     click_link "Key Metrics"
     expect(page).to have_title(full_title('Key Metrics'))
+    click_link "Marketing Acronyms"
+    expect(page).to have_title(full_title('Marketing Acronyms'))
 
     click_link "Home"
     click_link "Sign up now!"
