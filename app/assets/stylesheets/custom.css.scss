@@ -18,6 +18,9 @@ html {
 
 body {
   padding-top: 80px;
+background-image: image-url('home_page_image.jpeg');
+background-repeat: no-repeat;
+background-size: 100%;
 }
 
 .container {
@@ -74,8 +77,8 @@ p {
   line-height: 1.7em;
 }
 
-html body #bgimage {
-  background: url('home_page_image');
+#bgimage {
+  background-image: url('home_page_image');
 }
 
 
