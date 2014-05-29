@@ -102,8 +102,13 @@ p {
 }
 
 
-#nav-menu > ul > li > ul >li >a {
-  color: #666;
+#nav-menu > ul > li > ul >li {
+  a {
+   color: #666;
+    &:hover {
+     color: #fff; 
+    }
+  }
 }
 
 /* footer */
