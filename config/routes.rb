@@ -22,6 +22,7 @@ SampleApp::Application.routes.draw do
   match '/media_release', to: 'static_pages#media_release', via: 'get'
   match '/event_management', to: 'static_pages#event_management', via: 'get'
   match '/blogging', to: 'static_pages#blogging', via: 'get'
+  match '/digital_marketing',      to: 'static_pages#digital_marketing',      via: 'get' 
   match '/seo',      to: 'static_pages#seo',      via: 'get'
   match '/email_marketing',      to: 'static_pages#email_marketing',      via: 'get'
   match '/mobile_marketing',      to: 'static_pages#mobile_marketing',      via: 'get'

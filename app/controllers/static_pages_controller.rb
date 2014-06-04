@@ -40,6 +40,9 @@ class StaticPagesController < ApplicationController
   def digital_advertising
   end
 
+  def digital_marketing
+  end
+
   def seo
   end
 
